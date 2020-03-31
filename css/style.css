@@ -4,16 +4,29 @@
   font-size: 16px;
 }
 
-header {
-  height: 250px;
+body {
+  background-color: black;
+  color: white;
   display: -ms-grid;
   display: grid;
-  -ms-grid-rows: 50% 50%;
-      grid-template-rows: 50% 50%;
-  -ms-grid-columns: 50% 50%;
-      grid-template-columns: 50% 50%;
-      grid-template-areas: "h1 shapes" "h2 shapes";
-  width: 100%;
+  -ms-grid-columns: 450px calc(100% - 450px);
+      grid-template-columns: 450px calc(100% - 450px);
+      grid-template-areas: "sidebar main";
+}
+
+header {
+  background-color: white;
+  color: black;
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  grid-area: sidebar;
+  height: 100%;
+  position: fixed;
+  padding: 25px;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-rows: 30% 57.5% 12.5%;
+      grid-template-rows: 30% 57.5% 12.5%;
 }
 
 header h1 {
@@ -21,23 +34,35 @@ header h1 {
   font-size: 48px;
   -ms-flex-item-align: end;
       align-self: flex-end;
-  margin-left: 10%;
-  -ms-grid-row: 1;
-  -ms-grid-column: 1;
-  grid-area: h1;
 }
 
 header h2 {
   font-family: "Pangolin", cursive;
   font-size: 16px;
   opacity: 0.5;
-  margin-left: 10%;
-  -ms-grid-row: 2;
-  -ms-grid-column: 1;
-  grid-area: h2;
+}
+
+header .links {
+  border-top: 1px solid rgba(0, 0, 0, 0.342);
+  padding: 5px;
+}
+
+header .links .fa {
+  font-size: 30px;
+  width: 50px;
+  text-align: center;
+  text-decoration: none;
+  color: black;
+}
+
+header .links .fa:hover {
+  opacity: 0.7;
 }
 
 main {
+  -ms-grid-row: 1;
+  -ms-grid-column: 2;
+  grid-area: main;
   min-height: 100vh;
   display: -ms-grid;
   display: grid;
@@ -46,7 +71,6 @@ main {
           align-items: center;
   -ms-grid-columns: (minmax(350px, 1fr))[auto-fit];
       grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-  gap: 5%;
 }
 
 main .projectCard {
@@ -54,7 +78,47 @@ main .projectCard {
   padding: 10%;
 }
 
+main #title {
+  font-family: "Roboto", sans-serif;
+  font-size: 32px;
+  text-align: center;
+}
+
 main .projectCard:hover {
   cursor: pointer;
+}
+
+@media only screen and (max-width: 800px) {
+  body {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-rows: 30% 70%;
+        grid-template-rows: 30% 70%;
+    -ms-grid-columns: 100%;
+        grid-template-columns: 100%;
+        grid-template-areas: "sidebar" "main";
+  }
+  header {
+    -ms-grid-row: 1;
+    -ms-grid-column: 1;
+    grid-area: sidebar;
+    position: relative;
+    border: none;
+    padding: 0px;
+    width: 100vw;
+    height: 101vh;
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-rows: 30% 55% 15%;
+        grid-template-rows: 30% 55% 15%;
+    text-align: center;
+  }
+  header .fa {
+    margin-top: 10px;
+  }
+  main {
+    margin-top: 10%;
+    height: 120%;
+  }
 }
 /*# sourceMappingURL=style.css.map */
