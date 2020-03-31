@@ -1,1 +1,60 @@
-/* No CSS *//*# sourceMappingURL=style.css.map */
+* {
+  padding: 0;
+  margin: 0;
+  font-size: 16px;
+}
+
+header {
+  height: 250px;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-rows: 50% 50%;
+      grid-template-rows: 50% 50%;
+  -ms-grid-columns: 50% 50%;
+      grid-template-columns: 50% 50%;
+      grid-template-areas: "h1 shapes" "h2 shapes";
+  width: 100%;
+}
+
+header h1 {
+  font-family: "Pangolin", cursive;
+  font-size: 48px;
+  -ms-flex-item-align: end;
+      align-self: flex-end;
+  margin-left: 10%;
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  grid-area: h1;
+}
+
+header h2 {
+  font-family: "Pangolin", cursive;
+  font-size: 16px;
+  opacity: 0.5;
+  margin-left: 10%;
+  -ms-grid-row: 2;
+  -ms-grid-column: 1;
+  grid-area: h2;
+}
+
+main {
+  min-height: 100vh;
+  display: -ms-grid;
+  display: grid;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-grid-columns: (minmax(350px, 1fr))[auto-fit];
+      grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 5%;
+}
+
+main .projectCard {
+  font-family: "Roboto", sans-serif;
+  padding: 10%;
+}
+
+main .projectCard:hover {
+  cursor: pointer;
+}
+/*# sourceMappingURL=style.css.map */
