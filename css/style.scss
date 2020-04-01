@@ -5,8 +5,8 @@
 }
 
 body {
-    background-color: #e9e9e9;
-    color: black;
+    background-color: var(--mainBG);
+    color: var(--text);
     display: grid;
     grid-template-columns: 450px calc(100% - 450px);
     grid-template-areas: "sidebar main";
@@ -15,8 +15,8 @@ body {
 header {
     grid-area: sidebar;
 
-    background-color: white;
-    color: black;
+    background-color: var(--sidebarBG);
+    color: var(--text);
 
     height: 100%;
     position: fixed;
@@ -28,9 +28,12 @@ header {
     h1 {
         font-family: "Pangolin", cursive;
         font-size: 48px;
+        color: var(--mainBG);
 
         align-self: flex-end;
+    }
 
+    h1:hover {
         animation: colorchange 10s;
         animation-iteration-count: infinite;
         animation-direction: alternate;
@@ -39,12 +42,13 @@ header {
     h2 {
         font-family: "Pangolin", cursive;
         font-size: 16px;
+        color: var(--mainBG);
 
         opacity: 0.5;
     }
 
     .links {
-        border-top: 1px solid rgba(0, 0, 0, 0.342);
+        border-top: 1px solid var(--border);
         width: 75%;
 
         .fa {
@@ -53,7 +57,7 @@ header {
             margin: 2.5%;
 
             text-decoration: none;
-            color: black;
+            color: var(--icons);
         }
 
         .fa:hover {
@@ -76,13 +80,28 @@ main {
         text-align: center;
     }
 
-    #title {
-        font-family: "Roboto", sans-serif;
-        font-size: 32px;
-        text-align: center;
+    .titleCard {
+        display: grid;
+        align-items: center;
+
+        height: 100%;
+        width: 100%;
+
+        #title {
+            font-family: "Roboto", sans-serif;
+            font-size: 30px;
+            text-align: center;
+            align-self: flex-end;
+        }
+
+        h2 {
+            text-align: center;
+            font-size: 32px;
+            cursor: pointer;
+        }
     }
 
-    .projectCard:hover {
+    .projectCard img:hover {
         cursor: pointer;
     }
 }
@@ -130,6 +149,26 @@ main {
 }
 
 :root {
+    --black: #000000;
+    --white: #ffffff;
+    --lGrey: #b5bec6;
+    --dGrey: #364652;
+}
+
+.dark {
+    --sidebarBG: var(--white);
+    --mainBG: var(--black);
+    --text: var(--white);
+    --icons: var(--dGrey);
+    --border: var(--lGrey);
+}
+
+.light {
+    --sidebarBG: var(--black);
+    --mainBG: var(--white);
+    --text: var(--black);
+    --icons: var(--lGrey);
+    --border: var(--dGrey);
 }
 
 @keyframes colorchange {
