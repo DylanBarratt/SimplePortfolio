@@ -21,6 +21,7 @@ header {
   -ms-grid-column: 1;
   grid-area: sidebar;
   height: 100%;
+  width: 400px;
   position: fixed;
   padding: 25px;
   display: -ms-grid;
@@ -66,27 +67,35 @@ main {
   min-height: 100vh;
   display: -ms-grid;
   display: grid;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -ms-grid-columns: (minmax(350px, 1fr))[auto-fit];
-      grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  -ms-grid-columns: 20% 60% 20%;
+      grid-template-columns: 20% 60% 20%;
 }
 
 main .projectCard {
   font-family: "Roboto", sans-serif;
-  padding: 10%;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  margin: auto;
+  padding: 25px;
+  background-color: white;
+  -webkit-box-shadow: 0px 0px 25px 9px rgba(0, 0, 0, 0.2);
+          box-shadow: 0px 0px 25px 9px rgba(0, 0, 0, 0.2);
   text-align: center;
 }
 
-main #title {
-  font-family: "Roboto", sans-serif;
-  font-size: 32px;
-  text-align: center;
-}
-
-main .projectCard:hover {
+main .arrow {
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  margin: auto;
+  font-size: 48px;
+  visibility: hidden;
   cursor: pointer;
+}
+
+main:hover .arrow {
+  visibility: visible;
 }
 
 @media only screen and (max-width: 800px) {
@@ -107,7 +116,7 @@ main .projectCard:hover {
     border: none;
     padding: 0px;
     width: 100%;
-    height: 500px;
+    height: 100vh;
     display: -ms-grid;
     display: grid;
     -ms-grid-rows: 30% 55% 15%;
@@ -117,9 +126,20 @@ main .projectCard:hover {
   header .fa {
     margin-top: 10px;
   }
+  header .links {
+    padding: 0px;
+    width: 60%;
+    margin-left: 20%;
+  }
   main {
     height: 120%;
     margin-top: 10%;
+  }
+}
+
+@media only screen and (max-height: 350px) {
+  header {
+    height: 350px;
   }
 }
 /*# sourceMappingURL=style.css.map */
