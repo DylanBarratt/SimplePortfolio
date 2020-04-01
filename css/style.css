@@ -5,8 +5,8 @@
 }
 
 body {
-  background-color: black;
-  color: white;
+  background-color: #e9e9e9;
+  color: black;
   display: -ms-grid;
   display: grid;
   -ms-grid-columns: 450px calc(100% - 450px);
@@ -76,6 +76,7 @@ main {
 main .projectCard {
   font-family: "Roboto", sans-serif;
   padding: 10%;
+  text-align: center;
 }
 
 main #title {
@@ -92,8 +93,8 @@ main .projectCard:hover {
   body {
     display: -ms-grid;
     display: grid;
-    -ms-grid-rows: 30% 70%;
-        grid-template-rows: 30% 70%;
+    -ms-grid-rows: 500px calc(100% - 500px);
+        grid-template-rows: 500px calc(100% - 500px);
     -ms-grid-columns: 100%;
         grid-template-columns: 100%;
         grid-template-areas: "sidebar" "main";
@@ -105,8 +106,8 @@ main .projectCard:hover {
     position: relative;
     border: none;
     padding: 0px;
-    width: 100vw;
-    height: 101vh;
+    width: 100%;
+    height: 500px;
     display: -ms-grid;
     display: grid;
     -ms-grid-rows: 30% 55% 15%;
@@ -117,8 +118,8 @@ main .projectCard:hover {
     margin-top: 10px;
   }
   main {
-    margin-top: 10%;
     height: 120%;
+    margin-top: 10%;
   }
 }
 /*# sourceMappingURL=style.css.map */
