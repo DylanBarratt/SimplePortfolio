@@ -34,6 +34,12 @@ header h1 {
   font-size: 48px;
   -ms-flex-item-align: end;
       align-self: flex-end;
+  -webkit-animation: colorchange 10s;
+          animation: colorchange 10s;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+  -webkit-animation-direction: alternate;
+          animation-direction: alternate;
 }
 
 header h2 {
@@ -44,13 +50,12 @@ header h2 {
 
 header .links {
   border-top: 1px solid rgba(0, 0, 0, 0.342);
-  padding: 5px;
+  width: 75%;
 }
 
 header .links .fa {
   font-size: 30px;
-  width: 50px;
-  text-align: center;
+  margin: 2.5%;
   text-decoration: none;
   color: black;
 }
@@ -112,13 +117,93 @@ main .projectCard:hover {
     -ms-grid-rows: 30% 55% 15%;
         grid-template-rows: 30% 55% 15%;
     text-align: center;
+    -webkit-clip-path: polygon(50% 0%, 100% 0, 100% 65%, 50% 100%, 0 65%, 0 0);
+            clip-path: polygon(50% 0%, 100% 0, 100% 65%, 50% 100%, 0 65%, 0 0);
   }
   header .fa {
     margin-top: 10px;
   }
+  header .links {
+    padding: 0px;
+    width: 60%;
+    margin-left: 20%;
+    border: none;
+  }
   main {
     height: 120%;
     margin-top: 10%;
+  }
+}
+
+@-webkit-keyframes colorchange {
+  0% {
+    color: blue;
+  }
+  10% {
+    color: #8e44ad;
+  }
+  20% {
+    color: #1abc9c;
+  }
+  30% {
+    color: #d35400;
+  }
+  40% {
+    color: blue;
+  }
+  50% {
+    color: #34495e;
+  }
+  60% {
+    color: blue;
+  }
+  70% {
+    color: #2980b9;
+  }
+  80% {
+    color: #f1c40f;
+  }
+  90% {
+    color: #2980b9;
+  }
+  100% {
+    color: pink;
+  }
+}
+
+@keyframes colorchange {
+  0% {
+    color: blue;
+  }
+  10% {
+    color: #8e44ad;
+  }
+  20% {
+    color: #1abc9c;
+  }
+  30% {
+    color: #d35400;
+  }
+  40% {
+    color: blue;
+  }
+  50% {
+    color: #34495e;
+  }
+  60% {
+    color: blue;
+  }
+  70% {
+    color: #2980b9;
+  }
+  80% {
+    color: #f1c40f;
+  }
+  90% {
+    color: #2980b9;
+  }
+  100% {
+    color: pink;
   }
 }
 /*# sourceMappingURL=style.css.map */

@@ -30,6 +30,10 @@ header {
         font-size: 48px;
 
         align-self: flex-end;
+
+        animation: colorchange 10s;
+        animation-iteration-count: infinite;
+        animation-direction: alternate;
     }
 
     h2 {
@@ -41,12 +45,13 @@ header {
 
     .links {
         border-top: 1px solid rgba(0, 0, 0, 0.342);
-        padding: 5px;
+        width: 75%;
 
         .fa {
             font-size: 30px;
-            width: 50px;
-            text-align: center;
+
+            margin: 2.5%;
+
             text-decoration: none;
             color: black;
         }
@@ -103,13 +108,71 @@ main {
         grid-template-rows: 30% 55% 15%;
         text-align: center;
 
+        clip-path: polygon(50% 0%, 100% 0, 100% 65%, 50% 100%, 0 65%, 0 0);
+
         .fa {
             margin-top: 10px;
+        }
+
+        .links {
+            padding: 0px;
+
+            width: 60%;
+            margin-left: 20%;
+            border: none;
         }
     }
 
     main {
         height: 120%;
         margin-top: 10%;
+    }
+}
+
+:root {
+}
+
+@keyframes colorchange {
+    0% {
+        color: blue;
+    }
+
+    10% {
+        color: #8e44ad;
+    }
+
+    20% {
+        color: #1abc9c;
+    }
+
+    30% {
+        color: #d35400;
+    }
+
+    40% {
+        color: blue;
+    }
+
+    50% {
+        color: #34495e;
+    }
+
+    60% {
+        color: blue;
+    }
+
+    70% {
+        color: #2980b9;
+    }
+    80% {
+        color: #f1c40f;
+    }
+
+    90% {
+        color: #2980b9;
+    }
+
+    100% {
+        color: pink;
     }
 }
