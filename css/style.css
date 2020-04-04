@@ -21,15 +21,16 @@ header {
   background-color: var(--sidebarBG);
   color: var(--text);
   height: 100%;
+  width: 450px;
   position: fixed;
-  padding: 25px;
   display: -ms-grid;
   display: grid;
-  -ms-grid-rows: 30% 57.5% 12.5%;
-      grid-template-rows: 30% 57.5% 12.5%;
+  -ms-grid-rows: 10% 30% 45% 15%;
+      grid-template-rows: 10% 30% 45% 15%;
 }
 
 header h1 {
+  padding-left: 25px;
   font-family: "Pangolin", cursive;
   font-size: 48px;
   color: var(--mainBG);
@@ -47,13 +48,21 @@ header h1:hover {
 }
 
 header h2 {
+  padding-left: 25px;
   font-family: "Pangolin", cursive;
   font-size: 16px;
   color: var(--mainBG);
   opacity: 0.5;
 }
 
+header #toggle {
+  padding: 25px;
+  font-size: 32px;
+  cursor: pointer;
+}
+
 header .links {
+  margin-left: 25px;
   border-top: 1px solid var(--border);
   width: 75%;
 }
