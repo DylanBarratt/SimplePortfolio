@@ -56,7 +56,9 @@ header h2 {
 }
 
 header #toggle {
-  padding: 25px;
+  width: 40px;
+  height: 40px;
+  padding: 10px;
   font-size: 32px;
   cursor: pointer;
 }
@@ -104,8 +106,6 @@ main .titleCard {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  height: 100%;
-  width: 100%;
 }
 
 main .titleCard #title {
@@ -126,7 +126,7 @@ main .projectCard img:hover {
   cursor: pointer;
 }
 
-@media only screen and (max-width: 800px) {
+@media only screen and (max-width: 1000px) {
   body {
     display: -ms-grid;
     display: grid;
@@ -160,6 +160,9 @@ main .projectCard img:hover {
     width: 60%;
     margin-left: 20%;
     border: none;
+  }
+  header #toggle {
+    margin: auto;
   }
   main {
     height: 120%;
