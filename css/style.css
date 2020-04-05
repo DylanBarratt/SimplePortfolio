@@ -107,13 +107,6 @@ main .projectCard h1 {
   padding-top: 15px;
 }
 
-main .projectCard:hover {
-  -webkit-transition: all 0.3s ease;
-  transition: all 0.3s ease;
-  -webkit-transform: translateY(-5px);
-          transform: translateY(-5px);
-}
-
 main .titleCard {
   display: -ms-grid;
   display: grid;

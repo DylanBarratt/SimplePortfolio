@@ -102,11 +102,6 @@ main {
         }
     }
 
-    .projectCard:hover {
-        transition: all 0.3s ease;
-        transform: translateY(-5px);
-    }
-
     .titleCard {
         display: grid;
         align-items: center;
