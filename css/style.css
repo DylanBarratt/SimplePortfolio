@@ -57,6 +57,7 @@ header #toggle {
   width: 40px;
   height: 40px;
   padding: 10px;
+  padding-left: 25px;
   font-size: 32px;
   cursor: pointer;
 }
@@ -173,6 +174,7 @@ main .projectCard img:hover {
   }
   header #toggle {
     margin: auto;
+    padding: 0px;
   }
   main {
     height: 120%;
