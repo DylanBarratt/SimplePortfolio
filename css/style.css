@@ -39,12 +39,8 @@ header h1 {
 }
 
 header h1:hover {
-  -webkit-animation: colorchange 10s;
-          animation: colorchange 10s;
-  -webkit-animation-iteration-count: infinite;
-          animation-iteration-count: infinite;
-  -webkit-animation-direction: alternate;
-          animation-direction: alternate;
+  -webkit-animation: colorchange 10s infinite;
+          animation: colorchange 10s infinite;
 }
 
 header h2 {
@@ -53,6 +49,8 @@ header h2 {
   font-size: 16px;
   color: var(--mainBG);
   opacity: 0.5;
+  -webkit-animation: slideIn 0.5s forwards 0s ease;
+          animation: slideIn 0.5s forwards 0s ease;
 }
 
 header #toggle {
@@ -100,6 +98,20 @@ main .projectCard {
   text-align: center;
 }
 
+main .projectCard h1 {
+  border-top: 1px solid black;
+  width: 60%;
+  margin-left: 20%;
+  padding-top: 15px;
+}
+
+main .projectCard:hover {
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+  -webkit-transform: translateY(-5px);
+          transform: translateY(-5px);
+}
+
 main .titleCard {
   display: -ms-grid;
   display: grid;
@@ -116,10 +128,8 @@ main .titleCard #title {
       align-self: flex-end;
 }
 
-main .titleCard h2 {
-  text-align: center;
-  font-size: 32px;
-  cursor: pointer;
+main .titleCard #title:hover {
+  text-decoration: underline;
 }
 
 main .projectCard img:hover {
@@ -195,73 +205,65 @@ main .projectCard img:hover {
 
 @-webkit-keyframes colorchange {
   0% {
-    color: blue;
-  }
-  10% {
-    color: #8e44ad;
+    color: #1499fa;
   }
   20% {
-    color: #1abc9c;
-  }
-  30% {
-    color: #d35400;
+    color: #be6e84;
   }
   40% {
-    color: blue;
-  }
-  50% {
-    color: #34495e;
+    color: #a6deff;
   }
   60% {
-    color: blue;
-  }
-  70% {
-    color: #2980b9;
+    color: #e61f01;
   }
   80% {
-    color: #f1c40f;
-  }
-  90% {
-    color: #2980b9;
+    color: #f336b2;
   }
   100% {
-    color: pink;
+    color: #e72c68;
   }
 }
 
 @keyframes colorchange {
   0% {
-    color: blue;
-  }
-  10% {
-    color: #8e44ad;
+    color: #1499fa;
   }
   20% {
-    color: #1abc9c;
-  }
-  30% {
-    color: #d35400;
+    color: #be6e84;
   }
   40% {
-    color: blue;
-  }
-  50% {
-    color: #34495e;
+    color: #a6deff;
   }
   60% {
-    color: blue;
-  }
-  70% {
-    color: #2980b9;
+    color: #e61f01;
   }
   80% {
-    color: #f1c40f;
-  }
-  90% {
-    color: #2980b9;
+    color: #f336b2;
   }
   100% {
-    color: pink;
+    color: #e72c68;
+  }
+}
+
+@-webkit-keyframes slideIn {
+  0% {
+    -webkit-transform: translateX(-50px);
+            transform: translateX(-50px);
+  }
+  100% {
+    -webkit-transform: translateX(0px);
+            transform: translateX(0px);
+  }
+}
+
+@keyframes slideIn {
+  0% {
+    -webkit-transform: translateX(-50px);
+            transform: translateX(-50px);
+  }
+  100% {
+    -webkit-transform: translateX(0px);
+            transform: translateX(0px);
   }
 }
 /*# sourceMappingURL=style.css.map */
