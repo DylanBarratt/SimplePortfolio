@@ -97,6 +97,7 @@ main .projectCard {
   font-family: "Roboto", sans-serif;
   padding: 10%;
   text-align: center;
+  cursor: pointer;
 }
 
 main .projectCard h1 {
