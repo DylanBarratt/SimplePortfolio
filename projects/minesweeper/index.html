@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=10, initial-scale=1.0" />
+		<meta http-equiv="X-UA-Compatible" content="ie=edge" />
+		<title>Minesweeper</title>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.9.0/p5.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.9.0/addons/p5.dom.js"></script>
+		<script src="app.js"></script>
+	</head>
+	<style>
+		@import url("https://fonts.googleapis.com/css?family=Roboto&display=swap");
+		html {
+			overflow: hidden;
+		}
+		body {
+			margin: 0%;
+			padding: 0%;
+		}
+		.p5Canvas {
+			position: absolute;
+			top: 60%;
+			left: 50%;
+			transform: translate(-50%, -50%);
+		}
+		#title {
+			font-family: "Roboto", sans-serif;
+			width: 100%;
+			text-align: center;
+		}
+		#subtitle {
+			font-family: "Roboto", sans-serif;
+			width: 100%;
+			text-align: center;
+		}
+		#score {
+			font-family: "Roboto", sans-serif;
+			width: 100%;
+			text-align: center;
+		}
+	</style>
+
+	<body>
+		<h1 id="title">Minesweeper by <a href="https://github.com/dylanbarratt">DylanBarratt</a></h1>
+		<h2 id="subtitle">Press tiles to reveal whats beneath. The objective is to not find bombs!</h2>
+		<h3 id="score">Flag a tile by holding a key while clicking a tile</h3>
+		<h3 id="score">Score:</h3>
+	</body>
+</html>
